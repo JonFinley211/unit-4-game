@@ -1,160 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Number Checker</title>
+    <title>simple crystal game</title>
 
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
+    
 
 </head>
 
 <body>
 
-  <div class="jumbotron">
-    <h1 class="text-center">Number Guesser</h1>
-    <h2 class="text-center">See if you can guess the number the computer is thinking of!</h2>
-  </div>
+    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+  <h1>Wins: <span id="wiCount"></span></h1>
+    <h1>Losses: <span id="loCount"></span>
+     <h1>
+      <h1>Your Score is: <span id="scCount"></span>
+       <h1>
+                    <!-- Note that this div is now empty. We will fill it dynamically -->
+        <div id="crystals">
+         </div>
+        <!-- JAVASCRIPT  -->
+          </h1>
+                 <!-- ========================================= -->
+           
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-2">
-          <h3 class="card-header">Computer Pick</h3>
-          <div class="card-body text-center">
-            <h1 id="computer-pick">120</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-2">
-          <h3 class="card-header">You Pick</h3>
-          <div class="card-body text-center">
-            <button id="button-1" class="btn btn-danger btn-choice" >
-               <h1>1?</h1>
-            </button>
-            <button id="button-2" class="btn btn-danger btn-choice" >
-              <h1>2?</h1>
-            </button>
-            <button id="button-3" class="btn btn-danger btn-choice">
-              <h1>3?</h1>
-            </button>
-            <button id="button-4" class="btn btn-danger btn-choice">
-              <h1>4?</h1>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-2">
-          <h3 class="card-header">Result</h3>
-          <div class="card-body text-center">
-            <h1 id="result"></h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-
-      // Initial Variables
-      var firstnumber = Math.floor(Math.random() * 12) + 1;
-      var secondnumber = Math.floor(Math.random() * 12) + 1;
-      var thridnumber= Math.floor(Math.random() * 12) + 1;
-      var fourthnumber= Math.floor(Math.random() * 12) + 1;
-      var operator = "";
-      var result = 0;
-      var isOperatorChosen = false;
-      var isCalculated = false;
-      var computerPick = Math.floor(Math.random() * 100) + 20;
-      var lockGame = false;
-
-
-      function gameStats() {
-        
-      var gamewins=0;
-      var gamelosses=0;
-      }
-    //  function randnumbers(){
-    //  var firstnumber = Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  var secondnumber= Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  var thirdnumber = Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  var fourthnumber = Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  }
-
-      // We log the computer's pick to console to make it easier to troubleshoot------
-      console.log("Computer Pick: " + computerPick);
-      console.log("the first number is "+ firstnumber);
-      console.log("the second number is "+ secondnumber);
-      console.log("the third number is "+ thridnumber);
-      console.log("the fourth number is "+ fourthnumber);
-
-      // Here we create the on click event that gets the user"s pick
-      $(".btn-choice").on("click", function() {
-    //     var firstnumber = Math.floor(Math.random() * 12) + 1;
-     
-    var yourPick = $(this).val();
-          console.log("Your Pick: " + yourPick);
-    //  var secondnumber= Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  var thirdnumber = Math.floor(Math.random() * 12) + 1;
-     
-     
-    //  var fourthnumber = Math.floor(Math.random() * 12) + 1;
-      
-
-        // Here this lockGame line prevents the user from changing the option after the game is done.
-        // if (lockGame !== true) {
-
-          // We get the value associated with the button the user picked from here
-        //   var yourPick = $(this).val();
-        //   console.log(firstnumber);
-
-          // We then reveal the computer's pick in the html
-        //   $("#computer-pick").text(computerPick);
-
-          // If your pick matched the computer's pick you let them know.
-        //   if (parseInt(yourPick) === computerPick) {
-        //     $("#result").text("Yep! You got it! Refresh the page to play again.");
-        //     lockGame = true;
-        //   }
-
-        //   // If the numbers did not match. You also let them know
-        //   else {
-        //     $("#result").text("Nope. Refresh the page to play again.");
-        //     lockGame = true;
-        //   }
-        
-
-      });
-    });
-
-  </script>
-
+           <script type="text/javascript" src="assets/javascript/game.js"></script>
+                               
+            </script>
 </body>
 
 </html>

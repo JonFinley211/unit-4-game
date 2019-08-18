@@ -1,0 +1,17 @@
+body {
+    background: url("../images/bgpastel.jpg");
+
+}
+
+.crystal-image {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+
+
+}
